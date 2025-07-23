@@ -1,0 +1,82 @@
+===============================
+ NETWORK TECHNICIAN - LESSON 11
+===============================
+
+Network Troubleshooting Commands
+
+--------------------------------------------------
+
+1. ping
+--------
+
+- Tests connectivity to a target IP or domain.
+- Sends ICMP echo requests and waits for replies.
+- Example:  
+  ping 8.8.8.8  
+  ping google.com
+- Useful to check if a host is reachable.
+
+--------------------------------------------------
+
+2. tracert / traceroute
+-----------------------
+
+- Shows the path packets take to reach a destination.
+- Lists each router (hop) along the way and the time taken.
+- Windows command: tracert  
+- Linux/macOS command: traceroute
+- Example:  
+  tracert google.com
+
+--------------------------------------------------
+
+3. ipconfig / ifconfig
+----------------------
+
+- Displays IP configuration of your computer.
+- ipconfig on Windows, ifconfig on Linux/macOS.
+- Shows IP address, subnet mask, default gateway, DNS servers.
+
+--------------------------------------------------
+
+4. nslookup
+-----------
+
+- Queries DNS to find IP for a domain or vice versa.
+- Useful for troubleshooting DNS issues.
+- Example:  
+  nslookup google.com
+
+--------------------------------------------------
+
+5. netstat
+----------
+
+- Shows active network connections and listening ports.
+- Helps find open ports and troubleshoot network issues.
+- Example:  
+  netstat -an
+
+--------------------------------------------------
+
+Homework:
+---------
+
+1. Ping your default gateway and an external IP.
+2. Use tracert/traceroute to a website.
+3. Check your IP and DNS info using ipconfig/ifconfig.
+4. Query DNS with nslookup.
+5. List active connections with netstat.
+
+--------------------------------------------------
+
+Next Lesson Preview:
+--------------------
+
+- Basics of firewalls and security rules  
+- Introduction to packet capturing tools (Wireshark)  
+- VLAN and switch configuration examples
+
+===============================
+         END OF LESSON 11
+===============================

@@ -1,0 +1,57 @@
+===============================
+ NETWORK TECHNICIAN - LESSON 10
+===============================
+
+Routing, NAT & VLANs Basics
+
+--------------------------------------------------
+
+1. Routing Basics
+-----------------
+
+- Routers forward packets between different networks.
+- They use routing tables to decide where to send traffic.
+- The default gateway is the router IP your device uses to send data outside its local network.
+
+--------------------------------------------------
+
+2. NAT (Network Address Translation)
+------------------------------------
+
+- NAT translates private IP addresses to a public IP address.
+- Enables multiple devices on a local network to share one public IP.
+- Types of NAT:
+  - Static NAT: One-to-one mapping.
+  - Dynamic NAT: Pool of public IPs assigned dynamically.
+  - PAT (Port Address Translation): Multiple private IPs share one public IP using different ports (most common in homes).
+
+--------------------------------------------------
+
+3. VLANs (Virtual Local Area Networks)
+--------------------------------------
+
+- VLANs divide a physical network into multiple logical networks.
+- Improves security and reduces broadcast domains.
+- Devices in different VLANs cannot communicate without routing.
+
+--------------------------------------------------
+
+Homework:
+---------
+
+1. Find your device’s default gateway IP (ipconfig on Windows).
+2. Research your home router’s NAT type (check in its admin panel).
+3. Read about VLAN tagging and how switches handle VLANs.
+
+--------------------------------------------------
+
+Next Lesson Preview:
+--------------------
+
+- Advanced subnetting
+- Network troubleshooting commands (ping, tracert, nslookup)
+- Basics of firewalls
+
+===============================
+         END OF LESSON 10
+===============================

@@ -1,0 +1,8 @@
+# Show file permissions
+ls -l
+
+# Change file permission
+chmod 755 script.sh
+
+# Change file owner
+sudo chown eric:eric myfile.txt

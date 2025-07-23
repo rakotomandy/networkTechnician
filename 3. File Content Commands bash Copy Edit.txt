@@ -1,0 +1,11 @@
+# Show file contents
+cat file.txt
+
+# Show file contents with scroll (use q to quit)
+less file.txt
+
+# Edit file (with nano editor)
+nano file.txt
+
+# Search text in file
+grep "searchword" file.txt

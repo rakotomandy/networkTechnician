@@ -1,0 +1,95 @@
+lesson7_text = """
+===============================
+ NETWORK TECHNICIAN - LESSON 7
+===============================
+
+Wireless Security & Hardening
+
+--------------------------------------------------
+
+1. Wireless Encryption Standards
+--------------------------------
+
+WPA2 vs WPA3:
+
+| Feature       | WPA2                        | WPA3                              |
+|---------------|-----------------------------|------------------------------------|
+| Year Introduced | 2004                      | 2018                               |
+| Encryption     | AES (strong)               | AES + SAE (stronger)               |
+| Protection     | Basic against brute-force  | Resistant to offline attacks       |
+| Compatibility  | Very compatible            | Newer devices only                 |
+
+Always use WPA3 if your device supports it. Otherwise, use WPA2-AES — avoid WEP or WPA.
+
+--------------------------------------------------
+
+2. MAC Address Filtering
+------------------------
+
+What is it?
+- Every device has a unique MAC address (e.g. F4:CE:46:1A:6C:D0).
+- Routers can allow or block devices by MAC.
+
+How to Set Up:
+1. Login to router (e.g. 192.168.1.1)
+2. Go to Wireless Security or Access Control
+3. Add allowed or blocked MACs
+
+Pros and Cons:
+
+| Pros                           | Cons                              |
+|--------------------------------|-----------------------------------|
+| Adds layer of control          | Can be bypassed (MAC spoofing)    |
+| Helps monitor connections      | Not strong alone — combine with WPA2/3 |
+
+--------------------------------------------------
+
+3. WPS (Wi-Fi Protected Setup)
+------------------------------
+
+- Allows connecting without password via button or PIN.
+- Vulnerable to brute-force PIN attacks.
+- **Disable WPS** in your router settings.
+
+--------------------------------------------------
+
+4. Wireless Network Hardening
+-----------------------------
+
+Best Practices:
+1. Change default SSID and password.
+2. Turn off SSID broadcasting (optional).
+3. Use strong encryption (WPA3 or WPA2-AES).
+4. Disable remote admin.
+5. Update router firmware regularly.
+6. Use guest networks for visitors.
+
+--------------------------------------------------
+
+Bonus: Check Connected Devices
+
+# Windows command
+arp -a
+
+Or check DHCP client list on router admin panel.
+
+--------------------------------------------------
+
+Homework:
+---------
+1. Login to router, check WPA version and disable WPS.
+2. List devices connected by MAC and IP.
+3. Enable MAC filtering for one device, test connecting another device.
+
+--------------------------------------------------
+
+Next Lesson Preview:
+---------------------
+- OSI Model (7 layers)
+- TCP/IP Stack
+- Common ports & protocols (DNS, FTP, SSH, etc.)
+
+===============================
+         END OF LESSON 7
+===============================
+"""

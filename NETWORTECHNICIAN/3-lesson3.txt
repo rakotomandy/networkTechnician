@@ -1,0 +1,108 @@
+lesson3_text = """
+===============================
+ NETWORK TECHNICIAN - LESSON 3
+===============================
+
+1. Wireshark Basics — Network Packet Analyzer
+---------------------------------------------
+
+What is Wireshark?
+------------------
+- Wireshark is a free tool used to capture and analyze network traffic.
+- It shows all packets traveling over your network.
+- Helps with troubleshooting, detecting intrusions, and learning protocols.
+
+How to Use It:
+--------------
+1. Download from: https://www.wireshark.org/
+2. Open Wireshark and select your network interface.
+3. Click "Start" to begin capturing packets.
+4. Use filters to focus:
+   - ip.addr == 192.168.1.10  # Filter by IP
+   - tcp                     # Only show TCP packets
+   - http                    # Show HTTP traffic
+
+Example Use Case:
+-----------------
+- Analyze slow internet issues
+- Detect unusual communication
+- Verify DNS or HTTP requests
+
+--------------------------------------------------
+
+2. Static IP Configuration
+--------------------------
+
+Why use a static IP?
+---------------------
+- The device keeps the same IP, which is useful for printers, servers, etc.
+
+How to set static IP on Windows:
+-------------------------------
+1. Go to: Settings > Network > Adapter Options
+2. Right-click your adapter > Properties
+3. Select: Internet Protocol Version 4 (TCP/IPv4) > Properties
+4. Choose: "Use the following IP address"
+   - IP address: e.g., 192.168.1.50
+   - Subnet mask: 255.255.255.0
+   - Default gateway: e.g., 192.168.1.1
+   - Preferred DNS: 8.8.8.8 or your router IP
+
+--------------------------------------------------
+
+3. IP Subnetting and Planning
+-----------------------------
+
+What is Subnetting?
+--------------------
+- Divides a network into smaller segments (subnets).
+- Helps organize and secure devices.
+
+Example:
+---------
+- Network: 192.168.1.0/24
+  - /24 means subnet mask = 255.255.255.0
+  - 256 total IPs (0–255)
+  - 254 usable IPs (minus network and broadcast addresses)
+
+Common Subnet Masks:
+---------------------
+| CIDR | Subnet Mask       | Usable Hosts |
+|------|-------------------|---------------|
+| /24  | 255.255.255.0     | 254           |
+| /25  | 255.255.255.128   | 126           |
+| /26  | 255.255.255.192   | 62            |
+| /27  | 255.255.255.224   | 30            |
+
+Why Subnet?
+------------
+- Organize departments (e.g., HR vs IT)
+- Improve security
+- Reduce network congestion
+
+--------------------------------------------------
+
+Homework:
+---------
+1. Download Wireshark and perform a packet capture.
+2. Practice setting a static IP on a Windows PC or VM.
+3. Calculate how many hosts are in /26 subnet (Answer: 62 usable).
+
+--------------------------------------------------
+
+Next Lesson Preview:
+---------------------
+- Advanced Wireshark filters
+- VLAN introduction
+- DHCP server configuration
+
+===============================
+         END OF LESSON 3
+===============================
+"""
+
+file_path3 = "/mnt/data/network_technician_lesson3.txt"
+with open(file_path3, "w") as f:
+    f.write(lesson3_text)
+
+file_path3

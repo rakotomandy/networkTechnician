@@ -1,0 +1,71 @@
+wireguard_cheatsheet = """
+===============================
+WIREGUARD INSTALLATION CHEAT SHEET
+===============================
+
+-------------------------------
+For Debian/Ubuntu (Terminal)
+-------------------------------
+
+sudo apt update
+sudo apt install wireguard -y
+sudo modprobe wireguard
+which wg
+wg --version
+
+-------------------------------
+For CentOS/RHEL/Fedora
+-------------------------------
+
+# CentOS 8+ and Fedora
+sudo dnf install wireguard-tools -y
+
+# CentOS 7
+sudo yum install epel-release -y
+sudo yum install kmod-wireguard wireguard-tools -y
+
+-------------------------------
+For Windows (PowerShell)
+-------------------------------
+
+# Use GUI Installer
+1. Visit: https://www.wireguard.com/install/
+2. Download and install the .exe
+3. Launch WireGuard app or use wireguard.exe in PowerShell
+
+-------------------------------
+For macOS (Terminal)
+-------------------------------
+
+brew install wireguard-tools
+# Or use App Store version (GUI)
+
+-------------------------------
+Post-Installation Commands
+-------------------------------
+
+# Generate key pair
+wg genkey | tee privatekey | wg pubkey > publickey
+
+# Check WireGuard status
+sudo wg
+
+# Example config location
+sudo cat /etc/wireguard/wg0.conf
+
+# Bring interface up (example)
+sudo wg-quick up wg0
+
+# Bring interface down
+sudo wg-quick down wg0
+
+===============================
+END OF CHEAT SHEET
+===============================
+"""
+
+file_path_cheat = "/mnt/data/wireguard_installation_cheatsheet.txt"
+with open(file_path_cheat, "w") as f:
+    f.write(wireguard_cheatsheet)
+
+file_path_cheat

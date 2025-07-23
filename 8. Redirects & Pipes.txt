@@ -1,0 +1,11 @@
+# Redirect output to a file (overwrite)
+ls > list.txt
+
+# Redirect output to a file (append)
+ls >> list.txt
+
+# Use output of one command in another
+ls | grep "word"
+
+# Combine multiple commands
+command1 && command2

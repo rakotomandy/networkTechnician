@@ -1,0 +1,77 @@
+===============================
+   TERMINAL COMMAND CHEAT SHEET
+===============================
+
+📁 FILE SYSTEM NAVIGATION
+-------------------------------
+pwd                     # Show current directory
+ls                      # List files and folders
+ls -l                   # Detailed listing
+ls -a                   # Show hidden files
+cd folder               # Enter a folder
+cd ..                   # Go up one level
+cd ~                    # Go to home directory
+mkdir foldername        # Create a new folder
+rmdir foldername        # Delete empty folder
+
+📝 FILE OPERATIONS
+-------------------------------
+touch file.txt          # Create empty file
+rm file.txt             # Delete file
+rm -r foldername        # Delete folder and contents
+cp src.txt dest.txt     # Copy file
+mv old.txt new.txt      # Move or rename file
+cat file.txt            # Display file content
+less file.txt           # View file with scroll
+nano file.txt           # Edit file in terminal
+
+🔍 SEARCH & FIND
+-------------------------------
+grep "text" file.txt    # Search text in file
+find . -name "*.txt"    # Find all .txt files
+
+🔁 REDIRECTION & PIPES
+-------------------------------
+command > file.txt      # Save output to file (overwrite)
+command >> file.txt     # Append output to file
+cat file.txt | grep "x" # Filter content through grep
+ls | less               # Pipe output into less viewer
+
+🔐 PERMISSIONS
+-------------------------------
+ls -l                   # Show file permissions
+chmod 755 file.sh       # Set permissions (rwxr-xr-x)
+chown user:group file   # Change file owner
+
+🔄 SYSTEM & PROCESS
+-------------------------------
+whoami                  # Show current user
+date                    # Show date and time
+top                     # Show running processes
+df -h                   # Disk space info
+du -sh folder           # Folder size
+
+📦 PACKAGE MANAGEMENT (Debian/Ubuntu)
+-------------------------------
+sudo apt update         # Update package list
+sudo apt install pkg    # Install package
+sudo apt remove pkg     # Uninstall package
+
+🔧 SHORTCUTS & TRICKS
+-------------------------------
+Ctrl + C                # Stop command
+Ctrl + L                # Clear screen
+Up Arrow                # Previous command
+!!                      # Repeat last command
+history                 # Command history
+clear                   # Clear terminal
+
+💡 TIPS
+-------------------------------
+man command             # Manual for a command
+chmod +x script.sh      # Make script executable
+./script.sh             # Run script
+
+===============================
+       END OF CHEAT SHEET
+===============================

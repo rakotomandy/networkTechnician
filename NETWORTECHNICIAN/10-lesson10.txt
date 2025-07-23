@@ -1,0 +1,90 @@
+===============================
+ NETWORK TECHNICIAN - LESSON 9
+===============================
+
+IP Addressing & Subnetting Basics
+
+--------------------------------------------------
+
+1. IPv4 Addressing
+-----------------
+
+- IPv4 address: 32 bits, written as 4 decimal numbers (octets) separated by dots  
+  Example: 192.168.1.10
+
+- Each octet is 8 bits (0-255)
+
+- Divided into:  
+  - Network part: identifies the network  
+  - Host part: identifies a device on that network
+
+--------------------------------------------------
+
+2. IPv6 Addressing (Overview)
+-----------------------------
+
+- IPv6: 128 bits, written as 8 groups of 4 hex digits separated by colons  
+  Example: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+
+- Designed to replace IPv4 due to limited addresses
+
+--------------------------------------------------
+
+3. Subnet Masks
+---------------
+
+- Subnet mask determines which part of IP is network and which is host  
+  Example: 255.255.255.0 means first 3 octets are network, last is host
+
+- CIDR notation: /24 means 24 bits are network portion  
+  Example: 192.168.1.10/24
+
+--------------------------------------------------
+
+4. Subnetting Basics
+--------------------
+
+- Allows dividing a large network into smaller sub-networks (subnets)
+
+- Useful for improving security and performance
+
+--------------------------------------------------
+
+5. Example Subnet Calculation (Class C)
+---------------------------------------
+
+- IP: 192.168.1.0  
+- Subnet mask: 255.255.255.0 or /24  
+- Number of hosts: 2^(32-24) - 2 = 254 hosts per subnet
+
+--------------------------------------------------
+
+6. DHCP vs Static IP
+--------------------
+
+| Method     | Description                              | Use Case                        |
+|------------|------------------------------------------|--------------------------------|
+| DHCP       | Dynamic Host Configuration Protocol; automatically assigns IPs to devices | Home and office networks        |
+| Static IP  | Manually assign fixed IP address to device | Servers, printers, important devices |
+
+--------------------------------------------------
+
+Homework:
+---------
+
+1. Find your device IP and subnet mask (ipconfig on Windows, ifconfig on Linux/macOS).  
+2. Calculate the network address for your IP and subnet mask.  
+3. Practice subnetting with different subnet masks (e.g., /25, /26).
+
+--------------------------------------------------
+
+Next Lesson Preview:
+--------------------
+
+- Routing basics and default gateway  
+- NAT (Network Address Translation)  
+- VLANs (Virtual LANs)
+
+===============================
+         END OF LESSON 9
+===============================

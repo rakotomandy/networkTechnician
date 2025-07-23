@@ -1,0 +1,38 @@
+# Show the current directory you're in
+pwd  # "Print Working Directory"
+
+# List files and folders in current directory
+ls
+
+# List files with details
+ls -l
+
+# List all files including hidden ones (those starting with '.')
+ls -a
+
+# Change directory
+cd foldername
+
+# Go back one level
+cd ..
+
+# Go to home directory
+cd ~
+
+# Make a new directory
+mkdir myFolder
+
+# Create a file (empty)
+touch myfile.txt
+
+# Remove a file
+rm myfile.txt
+
+# Remove a folder and all its contents
+rm -r myFolder
+
+# Copy a file
+cp file.txt /destination/path/
+
+# Move or rename a file
+mv file.txt newname.txt

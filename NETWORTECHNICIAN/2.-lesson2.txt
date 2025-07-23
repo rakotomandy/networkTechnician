@@ -1,0 +1,109 @@
+===============================
+ NETWORK TECHNICIAN - LESSON 2
+===============================
+
+# 1. ping - Test Network Connectivity
+
+# Purpose:
+# Sends small packets to another device to check if it responds.
+
+# Syntax:
+ping [destination]
+
+# Example:
+ping 8.8.8.8
+# Sends packets to Google DNS.
+# If you get replies, your internet connection is working.
+
+ping www.google.com
+# Tests if your DNS resolves domain names properly.
+# If this fails but ping 8.8.8.8 works, DNS is the problem.
+
+ping 192.168.1.1
+# Tests connection to your router or local gateway.
+
+--------------------------------------------------
+
+# 2. tracert - Trace Route of Packets
+
+# Purpose:
+# Shows each "hop" or router that packets go through to reach a destination.
+
+# Syntax:
+tracert [destination]
+
+# Example:
+tracert www.google.com
+
+# Sample output explanation:
+# 1   192.168.1.1        <--- Your router
+# 2   10.12.56.1         <--- ISP router
+# ...
+# 10  142.250.189.206    <--- Destination (Google)
+
+--------------------------------------------------
+
+# 3. nslookup - Check DNS Resolution
+
+# Purpose:
+# Resolves domain names to IP addresses using your DNS server.
+
+# Syntax:
+nslookup [domain]
+
+# Example:
+nslookup openai.com
+
+# Sample output:
+# Non-authoritative answer:
+# Name:    openai.com
+# Address: 104.18.12.213
+
+--------------------------------------------------
+
+# 4. ipconfig /all - Show Network Configuration
+
+# Purpose:
+# Displays detailed network info: IP addresses, gateway, DNS, etc.
+
+# Use this to verify your IP settings and identify problems.
+
+--------------------------------------------------
+
+# 5. netstat -ano - Show Network Connections
+
+# Purpose:
+# Displays active connections, open ports, and the process ID using them.
+
+# Syntax:
+netstat -ano
+
+# Sample columns:
+# Proto     Local Address     Foreign Address    State          PID
+
+--------------------------------------------------
+
+# Homework:
+
+# 1. Run these commands:
+ping 8.8.8.8
+ping www.google.com
+tracert www.openai.com
+nslookup github.com
+netstat -ano
+
+# 2. Write down:
+# - Which commands worked?
+# - Do you notice DNS issues?
+# - Can you identify your router in tracert output?
+
+--------------------------------------------------
+
+# Next Lesson Preview:
+# - Wireshark basics
+# - Static IP configuration
+# - IP subnetting and planning
+
+===============================
+         END OF LESSON 2
+===============================

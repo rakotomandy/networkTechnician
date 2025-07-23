@@ -1,0 +1,114 @@
+lesson6_text = """
+===============================
+ NETWORK TECHNICIAN - LESSON 6
+===============================
+
+VPN, Proxy vs VPN, and Security Tools
+
+--------------------------------------------------
+
+1. VPN (Virtual Private Network)
+--------------------------------
+
+What is a VPN?
+--------------
+- A VPN creates a secure, encrypted tunnel between your device and a remote server.
+- Hides your real IP address.
+- Encrypts all your internet activity.
+
+Use Cases:
+----------
+- Secure work from home
+- Hide activity from ISP
+- Access region-restricted content
+
+VPN Protocols:
+--------------
+| Protocol   | Description                            |
+|------------|----------------------------------------|
+| PPTP       | Fast but outdated and insecure         |
+| L2TP/IPSec | Secure and widely supported            |
+| OpenVPN    | Strong encryption, supports certificates |
+| WireGuard  | Fast and modern, high security         |
+
+--------------------------------------------------
+
+2. Proxy vs VPN
+---------------
+
+Comparison Table:
+-----------------
+| Feature           | Proxy                          | VPN                                  |
+|-------------------|--------------------------------|--------------------------------------|
+| Encryption        | ❌ No                          | ✅ Yes                               |
+| IP Hiding         | ✅ Yes                         | ✅ Yes                               |
+| Speed             | ✅ Fast                        | 🔁 Slightly slower (encrypted)       |
+| Coverage          | ❌ App-only (browser)          | ✅ System-wide                       |
+| Privacy/Security  | ❌ Low                         | ✅ High                              |
+
+Conclusion:
+-----------
+- Use VPN for full privacy and security.
+- Use proxy for lightweight, specific bypassing.
+
+--------------------------------------------------
+
+3. Basic Network Security Tools
+-------------------------------
+
+1. Nmap - Network Scanning
+--------------------------
+Command examples:
+nmap 192.168.1.1
+nmap -sP 192.168.1.0/24
+nmap -sV -T4 -O 192.168.1.5
+
+- Shows open ports, devices, OS, and services.
+
+2. Antivirus Software
+---------------------
+- Detects and removes malware and viruses.
+- Examples: Windows Defender, Kaspersky, Avast
+
+3. IDS/IPS - Intrusion Detection/Prevention Systems
+---------------------------------------------------
+| Tool     | Description                              |
+|----------|------------------------------------------|
+| IDS      | Monitors and alerts                      |
+| IPS      | Blocks malicious traffic automatically   |
+
+Popular IDS/IPS tools:
+- Snort
+- Suricata
+- OSSEC
+
+--------------------------------------------------
+
+Homework:
+---------
+1. Compare two VPN providers (features, privacy).
+2. Run Nmap scan on your local network:
+   nmap -sP 192.168.1.0/24
+3. Reflect:
+   - When to use VPN vs proxy?
+   - Why antivirus is not enough for full network protection?
+
+--------------------------------------------------
+
+Next Lesson Preview:
+---------------------
+- Wireless security (WPA2, WPA3)
+- MAC address filtering
+- WPS issues
+- Hardening access points
+
+===============================
+         END OF LESSON 6
+===============================
+"""
+
+file_path6 = "/mnt/data/network_technician_lesson6.txt"
+with open(file_path6, "w") as f:
+    f.write(lesson6_text)
+
+file_path6

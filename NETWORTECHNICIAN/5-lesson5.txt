@@ -1,0 +1,132 @@
+lesson5_text = """
+===============================
+ NETWORK TECHNICIAN - LESSON 5
+===============================
+
+Firewalls, Port Forwarding, and NAT
+
+--------------------------------------------------
+
+1. Firewalls
+------------
+
+What is a Firewall?
+-------------------
+- A firewall filters traffic based on rules.
+- Can be software (Windows Firewall) or hardware (router).
+- Allows or blocks traffic by IP, port, or application.
+
+Types of Firewalls:
+-------------------
+| Type            | Description                                  |
+|-----------------|----------------------------------------------|
+| Packet Filtering| Filters based on IP, port, and protocol      |
+| Stateful        | Tracks active connections                    |
+| Application     | Filters by application-level rules (e.g., HTTP only) |
+
+Example Rules:
+--------------
+| Rule              | Description                      |
+|-------------------|----------------------------------|
+| Allow port 80     | Allow HTTP traffic               |
+| Block port 23     | Block Telnet (insecure)          |
+| Allow 192.168.1.5 | Allow specific host              |
+
+Windows Firewall Commands:
+--------------------------
+netsh advfirewall show allprofiles
+# Shows firewall status
+
+netsh advfirewall set allprofiles state off
+# (Disables firewall - for test only)
+
+netsh advfirewall firewall add rule name="Open Port 80" dir=in action=allow protocol=TCP localport=80
+# Opens port 80 for incoming TCP traffic
+
+--------------------------------------------------
+
+2. Port Forwarding
+------------------
+
+What is Port Forwarding?
+-------------------------
+- Redirects traffic from your router to a specific device and port on your local network.
+- Used to host services from behind a NAT router.
+
+Example Setup:
+--------------
+| Device        | Internal IP     | Port |
+|---------------|------------------|------|
+| Web Server    | 192.168.1.10     | 80   |
+| Router (WAN)  | 203.0.113.5      | 8080 |
+
+# Rule: Forward 203.0.113.5:8080 → 192.168.1.10:80
+
+How to Configure:
+------------------
+- Log in to router (e.g., 192.168.1.1)
+- Go to "Port Forwarding" settings
+- Add a new rule:
+   - External Port: 8080
+   - Internal IP: 192.168.1.10
+   - Internal Port: 80
+   - Protocol: TCP
+
+--------------------------------------------------
+
+3. NAT (Network Address Translation)
+------------------------------------
+
+What is NAT?
+-------------
+- Allows multiple internal devices to use one public IP.
+- Translates internal (private) IPs to a public IP.
+
+Types of NAT:
+--------------
+| Type         | Description                              |
+|--------------|------------------------------------------|
+| Static NAT   | 1-to-1 mapping between private and public |
+| Dynamic NAT  | Automatic allocation of public IPs       |
+| PAT (NAT Overload) | Most common - uses port mapping    |
+
+Example:
+---------
+- Internal PC: 192.168.1.10
+- Router Public IP: 203.0.113.5
+- Request goes out with public IP; reply is returned to correct internal device via NAT.
+
+--------------------------------------------------
+
+Homework:
+---------
+1. Run:
+   netsh advfirewall show allprofiles
+
+2. Access router admin panel and locate port forwarding section.
+
+3. Check your public IP: https://whatismyipaddress.com
+
+4. Draw this:
+   - Your PC (internal IP)
+   - Router (NAT)
+   - Internet (public IP)
+
+--------------------------------------------------
+
+Next Lesson Preview:
+---------------------
+- VPN and how it works
+- VPN vs Proxy
+- Tools: Nmap, antivirus, IDS (Intrusion Detection Systems)
+
+===============================
+         END OF LESSON 5
+===============================
+"""
+
+file_path5 = "/mnt/data/network_technician_lesson5.txt"
+with open(file_path5, "w") as f:
+    f.write(lesson5_text)
+
+file_path5

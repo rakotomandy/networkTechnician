@@ -1,0 +1,71 @@
+===============================
+ NETWORK TECHNICIAN - LESSON 12
+===============================
+
+Basics of Firewalls & Security Rules
+
+--------------------------------------------------
+
+1. What is a Firewall?
+----------------------
+
+- A firewall controls incoming and outgoing network traffic.
+- Acts as a barrier between trusted and untrusted networks.
+- Can be hardware-based, software-based, or both.
+
+--------------------------------------------------
+
+2. Types of Firewalls
+---------------------
+
+- Packet Filtering: Examines packets’ source/destination IP and ports, blocks or allows.
+- Stateful Inspection: Tracks active connections and decides based on connection state.
+- Proxy Firewall: Intercepts all messages and forwards them after filtering.
+- Next-Generation Firewall (NGFW): Includes deep packet inspection, intrusion prevention.
+
+--------------------------------------------------
+
+3. Basic Firewall Rules
+-----------------------
+
+- Allow or deny traffic based on:
+  - IP addresses
+  - Port numbers
+  - Protocols (TCP, UDP)
+- Rules are processed top to bottom.
+- First matching rule is applied.
+
+--------------------------------------------------
+
+4. Common Firewall Ports to Allow or Block
+------------------------------------------
+
+| Port | Protocol | Common Use          |
+|-------|----------|--------------------|
+| 80    | TCP      | HTTP               |
+| 443   | TCP      | HTTPS              |
+| 22    | TCP      | SSH                |
+| 25    | TCP      | SMTP (email send)  |
+| 53    | UDP/TCP  | DNS                |
+
+--------------------------------------------------
+
+Homework:
+---------
+
+1. Identify which firewall (hardware or software) you have at home or work.
+2. Find your firewall settings and check rules.
+3. Try creating a simple rule to block or allow a port on your PC firewall.
+
+--------------------------------------------------
+
+Next Lesson Preview:
+--------------------
+
+- Introduction to Wireshark and packet capturing
+- How to analyze network traffic
+- Basic VLAN and switch configurations
+
+===============================
+         END OF LESSON 12
+===============================

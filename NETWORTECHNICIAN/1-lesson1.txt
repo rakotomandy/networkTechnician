@@ -1,0 +1,98 @@
+# Create a .txt file with the previous networking lesson, including commented explanations and examples
+lesson_text = """
+===============================
+ NETWORK TECHNICIAN - LESSON 1
+===============================
+
+# ✅ BASIC NETWORKING CONCEPTS
+
+1. What is a Network?
+----------------------
+A network is a group of connected computers and devices that can share data and resources.
+Example: Your home Wi-Fi is a network connecting your phone, laptop, and TV.
+
+2. Types of Networks
+----------------------
+# LAN  - Local Area Network (e.g., in a home or office)
+# WAN  - Wide Area Network (e.g., the Internet)
+# WLAN - Wireless LAN (Wi-Fi)
+# PAN  - Personal Area Network (e.g., Bluetooth)
+
+3. IP Address
+--------------
+Each device in a network has an IP address, which is like a phone number.
+# IPv4 Example: 192.168.1.10
+# IPv6 Example: fe80::1c3b:a842:5bfa
+
+4. MAC Address
+---------------
+MAC = Media Access Control address.
+A unique identifier for a network interface (network card).
+# Example: FC-3F-DB-0A-A1-6A
+
+5. Subnet Mask
+---------------
+Defines which portion of the IP address is the network and which is the host.
+# Example: 255.255.255.0
+
+6. Default Gateway
+-------------------
+The IP address of your router — used to access the internet or another network.
+# Example: 192.168.1.1
+
+7. DNS - Domain Name System
+----------------------------
+Translates human-friendly names into IP addresses.
+# Example:
+# www.openai.com → 104.18.12.213
+
+# 🧪 PRACTICAL COMMANDS (Run in Windows CMD)
+
+ipconfig /all
+---------------
+# Shows full network configuration
+# Look for:
+# - IPv4 Address
+# - Subnet Mask
+# - Default Gateway
+# - DNS Servers
+
+ping 8.8.8.8
+---------------
+# Tests your internet connection to Google DNS
+# If you get replies, your connection is working
+
+ping www.google.com
+--------------------
+# Tests DNS resolution (domain name → IP)
+
+tracert www.google.com
+-----------------------
+# Shows the route your request takes to Google
+
+# 🧠 HOMEWORK
+---------------
+1. Run `ipconfig /all` and write down:
+   - IPv4 address
+   - Default Gateway
+   - DNS servers
+
+2. Try to ping:
+   - 8.8.8.8
+   - www.google.com
+   - Your default gateway
+
+3. Write down:
+   - Which worked?
+   - Which gave errors?
+
+# Next Step Preview:
+# - Understand ping and tracert
+# - Use nslookup and netstat
+# - Draw your network topology
+
+===============================
+     END OF LESSON 1
+===============================
+"""
+

@@ -1,0 +1,14 @@
+# Show currently running processes
+top
+
+# Show your user name
+whoami
+
+# Show current date and time
+date
+
+# Show disk usage
+df -h
+
+# Show file/folder size
+du -sh foldername

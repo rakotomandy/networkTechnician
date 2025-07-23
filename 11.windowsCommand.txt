@@ -1,0 +1,93 @@
+==========================================
+       WINDOWS COMMAND LINE CHEAT SHEET
+==========================================
+
+📁 FILE AND DIRECTORY COMMANDS
+------------------------------------------
+dir                     # List contents of a directory
+cd foldername           # Change into a folder
+cd ..                   # Go back one level
+cd\                     # Go to root of drive (e.g., C:\)
+md foldername           # Make a new directory (same as mkdir)
+mkdir foldername        # Create folder (same as md)
+del filename            # Delete a file
+erase filename          # Delete a file (same as del)
+rmdir foldername        # Remove folder (only if empty)
+rmdir /s foldername     # Remove folder and all subfolders/files
+rmdir /s /q foldername  # Remove folder silently (no prompts)
+copy file1 file2        # Copy file1 to file2
+move file1 folder\      # Move file1 into folder
+ren old new             # Rename file or folder
+
+🧰 FILE VIEWING AND EDITING
+------------------------------------------
+type file.txt           # Display file content
+more file.txt           # Display file content page by page
+notepad file.txt        # Open file in Notepad
+echo Hello > file.txt   # Write text to file (overwrite)
+echo World >> file.txt  # Append text to file
+
+🧪 SYSTEM INFO AND TASKS
+------------------------------------------
+cls                     # Clear the screen
+echo %USERNAME%         # Show current username
+echo %CD%               # Show current directory
+time                    # Show/set system time
+date                    # Show/set system date
+hostname                # Display computer name
+ver                     # Show Windows version
+tasklist                # List running processes
+taskkill /PID 1234      # Kill process by PID
+shutdown /s /t 0        # Shutdown computer immediately
+shutdown /r /t 0        # Restart computer immediately
+
+💡 SYSTEM NAVIGATION AND DRIVES
+------------------------------------------
+C:                      # Switch to C drive
+D:                      # Switch to D drive (or other)
+chdir                   # Alias for cd
+start .                 # Open current folder in File Explorer
+explorer path           # Open a folder in File Explorer
+
+🔐 USER & PERMISSIONS
+------------------------------------------
+net user                # List user accounts
+net user username *     # Set/change password for user
+whoami                  # Show logged-in user
+
+🔁 REDIRECTS & PIPES
+------------------------------------------
+>   Redirect output to file (overwrite)
+>>  Redirect output to file (append)
+|   Pipe output to another command
+
+Examples:
+dir > list.txt          # Save output of dir into file
+type list.txt | more    # View file page by page
+
+📦 NETWORK COMMANDS
+------------------------------------------
+ipconfig                # Show IP settings
+ipconfig /all           # Detailed network info
+ping google.com         # Test internet connection
+tracert google.com      # Trace route to server
+netstat -an             # Show open network ports
+net use                 # Show shared network drives
+
+🧠 MISCELLANEOUS
+------------------------------------------
+cls                     # Clear screen
+pause                   # Pause script until key is pressed
+exit                    # Exit command prompt
+
+🛠 SHORTCUTS
+------------------------------------------
+F7                     # Show command history list
+F3                     # Repeat last command
+↑ / ↓ arrows           # Navigate command history
+Tab                    # Auto-complete folder/file name
+Ctrl + C               # Cancel current command
+
+==========================================
+            END OF CHEAT SHEET
+==========================================

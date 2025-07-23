@@ -1,0 +1,5 @@
+# Make script executable
+chmod +x myscript.sh
+
+# Run it
+./myscript.sh

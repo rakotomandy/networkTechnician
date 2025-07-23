@@ -1,0 +1,115 @@
+lesson4_text = """
+===============================
+ NETWORK TECHNICIAN - LESSON 4
+===============================
+
+VLANs, DHCP Server, and ARP
+
+--------------------------------------------------
+
+1. VLAN (Virtual Local Area Network)
+------------------------------------
+
+What is a VLAN?
+---------------
+- A VLAN splits a physical network into logical, isolated networks.
+- Devices in different VLANs cannot communicate unless routed.
+
+Why use VLANs?
+--------------
+- Security: isolate departments or groups
+- Reduced broadcast traffic
+- Better network organization
+
+Example:
+--------
+| VLAN ID | Purpose | IP Range        |
+|---------|---------|-----------------|
+| 10      | HR      | 192.168.10.0/24 |
+| 20      | IT      | 192.168.20.0/24 |
+
+Cisco VLAN Command Example:
+---------------------------
+interface FastEthernet0/1
+switchport mode access
+switchport access vlan 10
+
+--------------------------------------------------
+
+2. DHCP Server Configuration
+----------------------------
+
+What is DHCP?
+-------------
+- Dynamic Host Configuration Protocol
+- Automatically assigns IP settings to clients.
+
+Why use DHCP?
+-------------
+- Simplifies IP management
+- Prevents IP conflicts
+- Better for large networks
+
+Windows DHCP Server Setup:
+---------------------------
+1. Install "DHCP Server" role in Server Manager.
+2. Create a new DHCP Scope:
+   - Define IP range, subnet mask, gateway, DNS.
+3. Activate the scope.
+
+Sample DHCP Scope:
+------------------
+| Field        | Value              |
+|--------------|--------------------|
+| Scope Name   | MainLAN            |
+| IP Range     | 192.168.1.100-200  |
+| Subnet Mask  | 255.255.255.0      |
+| Gateway      | 192.168.1.1        |
+| DNS Servers  | 8.8.8.8            |
+
+--------------------------------------------------
+
+3. ARP (Address Resolution Protocol)
+------------------------------------
+
+What is ARP?
+------------
+- Resolves IP addresses to MAC addresses on a LAN.
+- Used for communication at Layer 2 of OSI model.
+
+ARP Commands:
+-------------
+arp -a
+# Shows the ARP table (IP-MAC mappings)
+
+arp -d [IP address]
+# Deletes a specific ARP entry
+
+--------------------------------------------------
+
+Homework:
+---------
+1. Watch a video demo on VLANs in Packet Tracer or real switch.
+2. Group your home/lab devices into VLAN-like categories.
+3. Use `arp -a` and note:
+   - Which IPs appear?
+   - What MACs are listed?
+
+--------------------------------------------------
+
+Next Lesson Preview:
+---------------------
+- Firewall concepts
+- Port forwarding
+- NAT (Network Address Translation)
+
+===============================
+         END OF LESSON 4
+===============================
+"""
+
+file_path4 = "/mnt/data/network_technician_lesson4.txt"
+with open(file_path4, "w") as f:
+    f.write(lesson4_text)
+
+file_path4

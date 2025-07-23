@@ -1,0 +1,76 @@
+===============================
+ NETWORK TECHNICIAN - LESSON 8
+===============================
+
+OSI Model & TCP/IP Basics
+
+--------------------------------------------------
+
+1. OSI Model (Open Systems Interconnection)
+-------------------------------------------
+
+- A conceptual framework to understand how networking functions work in layers.
+- Divides communication into 7 layers.
+
+| Layer Number | Name           | Function                         | Example Protocols/Devices     |
+|--------------|----------------|---------------------------------|------------------------------|
+| 7            | Application    | User interface & apps            | HTTP, FTP, SMTP, DNS         |
+| 6            | Presentation   | Data translation, encryption    | SSL/TLS, JPEG, MPEG          |
+| 5            | Session        | Manage sessions and connections | NetBIOS, PPTP                |
+| 4            | Transport      | End-to-end communication, error control | TCP, UDP             |
+| 3            | Network        | Routing and addressing           | IP, ICMP, routers            |
+| 2            | Data Link      | Physical addressing, MAC         | Ethernet, switches, bridges  |
+| 1            | Physical       | Transmission of raw bits         | Cables, hubs, repeaters      |
+
+--------------------------------------------------
+
+2. TCP/IP Stack
+---------------
+
+- Practical model used in real networks.
+- Has 4 layers mapping roughly to OSI:
+
+| TCP/IP Layer   | Corresponding OSI Layers | Purpose                          |
+|----------------|--------------------------|---------------------------------|
+| Application    | 7, 6, 5                  | Network apps (HTTP, FTP, etc.)  |
+| Transport      | 4                        | TCP, UDP (ports, reliability)   |
+| Internet       | 3                        | IP addressing, routing           |
+| Network Access | 2, 1                     | Hardware interface, MAC, physical|
+
+--------------------------------------------------
+
+3. Common Ports and Protocols
+-----------------------------
+
+| Protocol | Port Number(s) | Description                  |
+|----------|----------------|------------------------------|
+| HTTP     | 80             | Web traffic (insecure)       |
+| HTTPS    | 443            | Secure web traffic (SSL/TLS) |
+| FTP      | 20, 21         | File transfer                |
+| SSH      | 22             | Secure shell (remote login)  |
+| DNS      | 53             | Domain name resolving        |
+| SMTP     | 25             | Sending emails               |
+| POP3     | 110            | Receiving emails             |
+| IMAP     | 143            | Receiving emails (more features)|
+
+--------------------------------------------------
+
+Homework:
+---------
+
+1. Draw the OSI layers and list an example protocol for each.
+2. List ports of 5 common protocols and what they do.
+3. Use 'netstat -an' on your PC to see current connections and open ports.
+
+--------------------------------------------------
+
+Next Lesson Preview:
+--------------------
+
+- IP addressing (IPv4 and IPv6)
+- Subnetting basics
+- DHCP vs Static IP
+
+===============================
+         END OF LESSON 8
+===============================
