@@ -1,0 +1,79 @@
+===============================
+   WINDOWS TERMINAL CHEAT SHEET
+   (PowerShell version)
+===============================
+
+📁 FILE SYSTEM NAVIGATION
+-------------------------------
+Get-Location            # Show current directory (pwd)
+dir                     # List files and folders (ls)
+dir -Force              # Show hidden files (ls -a)
+cd folder               # Enter a folder
+cd ..                   # Go up one level
+cd ~                    # Go to home directory
+New-Item folder -ItemType Directory   # Create new folder (mkdir)
+Remove-Item folder      # Delete folder (if empty)
+Remove-Item folder -Recurse  # Delete folder and contents
+
+📝 FILE OPERATIONS
+-------------------------------
+New-Item file.txt       # Create empty file (touch)
+Remove-Item file.txt    # Delete file (rm)
+Copy-Item src.txt dest.txt    # Copy file (cp)
+Move-Item old.txt new.txt     # Move or rename file (mv)
+Get-Content file.txt    # Display file content (cat)
+more file.txt           # View file with scroll (less)
+notepad file.txt        # Edit file in Notepad
+
+🔍 SEARCH & FIND
+-------------------------------
+Select-String "text" file.txt     # Search text in file (grep)
+Get-ChildItem -Recurse -Filter *.txt   # Find all .txt files
+
+🔁 REDIRECTION & PIPES
+-------------------------------
+command > file.txt      # Save output to file (overwrite)
+command >> file.txt     # Append output to file
+Get-Content file.txt | Select-String "x"  # Filter content (grep)
+dir | more              # Pipe output into more viewer
+
+🔐 PERMISSIONS
+-------------------------------
+icacls file.txt         # Show file permissions
+icacls file.txt /grant User:F   # Give full control to user
+icacls file.txt /remove User    # Remove user permissions
+
+🔄 SYSTEM & PROCESS
+-------------------------------
+whoami                  # Show current user
+Get-Date                # Show date and time
+Get-Process             # Show running processes (like top)
+Stop-Process -Name notepad  # Kill process
+Get-PSDrive             # Show drives and disk space (df -h)
+Get-ChildItem folder | Measure-Object -Property Length -Sum   # Folder size
+
+📦 SOFTWARE MANAGEMENT
+-------------------------------
+winget search app       # Search for software
+winget install app      # Install software
+winget uninstall app    # Uninstall software
+
+🔧 SHORTCUTS & TRICKS
+-------------------------------
+Ctrl + C                # Stop command
+Ctrl + L                # (not built-in) → use `clear` or `cls`
+Up Arrow                # Previous command
+!!                      # (not in PowerShell) → use `Invoke-History`
+Get-History             # Show command history
+clear OR cls            # Clear terminal
+
+💡 TIPS
+-------------------------------
+Get-Help command        # Manual for a command (man)
+Set-ExecutionPolicy RemoteSigned   # Allow running scripts
+.\script.ps1            # Run PowerShell script
+Start-Process app.exe   # Launch program
+
+===============================
+       END OF CHEAT SHEET
+===============================
